@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="strutsBean" extends="struts-default" namespace="/">
+
+		<action name="login" class="cn.edu.zjut.action.UserAction" method="login">
+
+            <exception-mapping exception="cn.edu.zjut.exception.UserException" result="userExcp"/>
+
+            <result name="userExcp">/loginException.jsp</result>
+            <result name="success" >/loginSuccess.jsp</result>
+			<result name="fail">/login.jsp</result>
+			<result name="input">/login.jsp</result>
+            <result name="exception">/loginException.jsp</result>
+		</action>
+		
+		
+		<action name="allItems" class="cn.edu.zjut.action.ItemAction" method="getAllItems">
+			<result name="success">/ItemList.jsp</result>
+		</action>
+
+		<action name="register" class="cn.edu.zjut.action.UserAction" method="register">
+            <result name="regSuccess">/regSuccess.jsp</result>
+        </action>
+
+
+		<!-- struts use method to specify the method you want to call default="execute" -->
+	</package>
+</struts>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+"-//Apache Struts//XWork Validator 1.0.2//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="customer.account">
+		<field-validator type="requiredstring"> 
+			<param name="trim">true</param> 
+			<message></message>
+	    </field-validator>
+	</field>
+
+	<field name="customer.password"> 
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="login.password.empty"></message> 
+		</field-validator>
+	</field>
+	
+	<!--<field name="customer.phone">-->
+		<!--<field-validator type="stringlength">-->
+			<!--<param name="minLength">10</param>-->
+			<!--<param name="maxLength">12</param>-->
+			<!--<message>电话号码长度错误</message>-->
+		<!--</field-validator>-->
+	<!--</field>-->
+	<!---->
+	<!--<field name="customer.repassword">-->
+		<!--<field-validator type="requiredstring">-->
+			<!--<message>重复密码必填</message>-->
+		<!--</field-validator>-->
+	<!--</field>-->
+	
+		<field name="customer.name">
+		<field-validator type="requiredstring">
+			<message>姓名必填</message>
+		</field-validator>
+	</field>
+	
+		<!--<field name="customer.phone">-->
+		<!--<field-validator type="requiredstring">-->
+			<!--<message>电话必填</message>-->
+		<!--</field-validator>-->
+	<!--</field>-->
+	<!---->
+	<!--<field name="customer.repassword">-->
+		<!--<field-validator type="fieldexpression">-->
+			<!--<param name="expression">(customer.password == customer.repassword)</param>-->
+			<!--<message >密码和确认密码应该相同</message>-->
+		<!--</field-validator>-->
+	<!--</field>-->
+	<!---->
+	<!--<field name="customer.email">-->
+		<!--<field-validator type="email">-->
+			<!--<message>请输入正确的邮箱地址</message>-->
+		<!--</field-validator>-->
+	<!--</field>-->
+</validators>
